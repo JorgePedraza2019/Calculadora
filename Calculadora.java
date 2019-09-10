@@ -8,7 +8,7 @@ class Calculadora {
         
         int d1;
         int d2;
-        float o;
+        int o;
         
         System.out.println("*********************************************");
         System.out.println("Division");
@@ -22,6 +22,7 @@ class Calculadora {
         String Pregunta = "si";
         
         do {
+            try {
             System.out.print("Ingrese la Opción: ");
             
             String cal ; 
@@ -141,8 +142,12 @@ class Calculadora {
                 default:
                 System.out.println("\nPorfavor valide que su opción escrita sea correcta");
                 Calculadora.main (null); 
+                
             }                           
-                    
+            
+            } catch (Exception e) {
+            System.out.println("Hubo un error aritmético. Favor de escribir una operación válida.");
+            } 
                 Scanner entrada=new Scanner(System.in);
                 
                 System.out.println(" ");
