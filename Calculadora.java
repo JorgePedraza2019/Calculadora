@@ -6,9 +6,9 @@ class Calculadora {
     
     public static void main(String args[]) {
         
-        int d1;
-        int d2;
-        int o;
+        float d1;
+        float d2;
+        float o;
         
         System.out.println("*********************************************");
         System.out.println("Division");
@@ -35,9 +35,9 @@ class Calculadora {
                 Scanner in = new Scanner(System.in);
                                      
                 System.out.print("\nIngrese el primer dígito: ");
-                d1=in.nextInt();
+                d1=in.nextFloat();
                 System.out.print("Ingrese el segundo dígito: ");
-                d2=in.nextInt();
+                d2=in.nextFloat();
 
                 o=d1/d2;
                 System.out.print("\nEl resultado es: "+d1);
@@ -51,9 +51,9 @@ class Calculadora {
                 Scanner in1 = new Scanner(System.in);
                 
                 System.out.print("\nIngrese el primer dígito: ");
-                d1=in1.nextInt();
+                d1=in1.nextFloat();
                 System.out.print("Ingrese el segundo dígito: ");
-                d2=in1.nextInt();
+                d2=in1.nextFloat();
 
                 o=d1+d2;
                 System.out.print("\nEl resultado es: "+d1);
@@ -66,9 +66,9 @@ class Calculadora {
                 case "multiplicacion":
                 Scanner in2 = new Scanner (System.in);
                 System.out.print("\nIngrese el primer dígito: ");
-                d1=in2.nextInt();
+                d1=in2.nextFloat();
                 System.out.print("Ingrese el segundo dígito: ");
-                d2=in2.nextInt();
+                d2=in2.nextFloat();
 
                 o=d1*d2;
                 System.out.print("\nEl resultado es: "+d1);
@@ -81,9 +81,9 @@ class Calculadora {
                 case "modulo":
                 Scanner in3 = new Scanner (System.in);
                 System.out.print("\nIngrese el primer dígito: ");
-                d1=in3.nextInt();
+                d1=in3.nextFloat();
                 System.out.print("Ingrese el segundo dígito: ");
-                d2=in3.nextInt();
+                d2=in3.nextFloat();
                 
                 o=d1 % d2;
                 System.out.println("\nEl resultado es = "+o);
@@ -94,9 +94,9 @@ class Calculadora {
                 case "resta":
                 Scanner in4 = new Scanner (System.in);
                 System.out.print("Ingrese el primer dígito: ");
-                d1=in4.nextInt();
+                d1=in4.nextFloat();
                 System.out.print("Ingrese el segundo dígito: ");
-                d2=in4.nextInt();
+                d2=in4.nextFloat();
 
                 o=d1-d2;
                 System.out.print("\nEl resultado es: "+d1);
@@ -110,27 +110,47 @@ class Calculadora {
                 case "todos":
                 Scanner in5 = new Scanner (System.in);
                 System.out.print("Ingrese el primer dígito: ");
-                d1=in5.nextInt();
+                d1=in5.nextFloat();
                 System.out.print("Ingrese el segundo dígito: ");
-                d2=in5.nextInt();
+                d2=in5.nextFloat();
                 
-                o=d1/d2;
-                System.out.println(" ");
-                System.out.println("Resultado División = "+o);
-                
-                o=d1+d2;
-                System.out.println("Resultado Suma = "+o);
-                
-                o=d1*d2;
-                System.out.println("Resultado Multiplicación = "+o);
-                
-                o=d1 % d2;
-                System.out.println("Resultado Módulo = "+o);
-                
-                o=d1-d2;
-                System.out.println("Resultado Resta = "+o);
-                               
-                
+                if ((d1 == 0) | (d2 == 0)) {
+                    o=d1/d2;
+                    System.out.println(" ");
+                    System.out.print("Resultado División = "+o);
+                    System.out.println(" (Hubo un error aritmético con la dvisión ya que no se puede dividir entre 0)");
+                                        
+                    o=d1+d2;
+                    System.out.println("Resultado Suma = "+o);
+                    
+                    o=d1*d2;
+                    System.out.println("Resultado Multiplicación = "+o);
+                    
+                    o=d1 % d2;
+                    System.out.print("Resultado Módulo = "+o);
+                    System.out.println(" (Hubo un error aritmético con el módulo ya que no se puede dividir entre 0)");
+                    
+                    o=d1-d2;
+                    System.out.println("Resultado Resta = "+o);
+
+                } else {
+                    o=d1/d2;
+                    System.out.println(" ");
+                    System.out.println("Resultado División = "+o);
+                    
+                    o=d1+d2;
+                    System.out.println("Resultado Suma = "+o);
+                    
+                    o=d1*d2;
+                    System.out.println("Resultado Multiplicación = "+o);
+                    
+                    o=d1 % d2;
+                    System.out.println("Resultado Módulo = "+o);
+                    
+                    o=d1-d2;
+                    System.out.println("Resultado Resta = "+o);
+                }
+                                              
                 break;
                 
                 case "Salir":
